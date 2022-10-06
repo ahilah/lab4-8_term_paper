@@ -18,7 +18,7 @@ public class MainCommand {
             operatorNetwork = new Network();
         }
         menuItems = new LinkedHashMap<>();
-        menuItems.put("add", new Add(operatorNetwork));
+        menuItems.put("add", new AddCommand(operatorNetwork));
         menuItems.put("edit", new EditCommand(operatorNetwork));
         menuItems.put("view", new ViewCommand(operatorNetwork));
         menuItems.put("sort", new SortCommand(operatorNetwork));
