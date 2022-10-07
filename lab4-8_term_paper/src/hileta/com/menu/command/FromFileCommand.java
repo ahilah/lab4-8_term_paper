@@ -15,4 +15,9 @@ public class FromFileCommand implements MenuCommand {
         System.out.println("from file.");
 
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

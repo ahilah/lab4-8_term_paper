@@ -15,4 +15,9 @@ public class SortCommand implements MenuCommand {
         System.out.println("sort");
         network.sortTariffs();
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

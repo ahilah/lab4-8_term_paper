@@ -7,4 +7,6 @@ import java.util.List;
 public interface MenuCommand {
 
     void execute(); //throws InterruptedException, IOException, SQLException;
+
+    String getCommandInfo();
 }

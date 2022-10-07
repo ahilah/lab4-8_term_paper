@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public class MainStart {
     public static void main(String[] args) throws InterruptedException, IOException, SQLException {
-        System.out.println("HELLO WORLD");
         MainMenu mainMenu = new MainMenu();
         mainMenu.StartMainMenu();
     }

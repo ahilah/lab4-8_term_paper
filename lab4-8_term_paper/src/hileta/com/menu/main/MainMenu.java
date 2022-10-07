@@ -1,6 +1,5 @@
 package hileta.com.menu.main;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -10,9 +9,10 @@ public class MainMenu {
 
     public void StartMainMenu() {
         while (true) {
-            System.out.println("\nAvailable commands: " + mainCommand.getAvailableCommands());
+            System.out.println("\nAvailable commands: ");
+            mainCommand.showAvailableCommands();
             System.out.print("Enter your command here: ");
-            String command = scanner.next().toLowerCase(Locale.ROOT);
+            int command = scanner.nextInt();
             mainCommand.execute(command);
         }
     }

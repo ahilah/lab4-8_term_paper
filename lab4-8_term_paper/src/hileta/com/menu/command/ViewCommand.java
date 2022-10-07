@@ -16,4 +16,9 @@ public class ViewCommand implements MenuCommand {
         network.showAbroad();
         network.showTariffs();
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

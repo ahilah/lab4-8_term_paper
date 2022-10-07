@@ -15,4 +15,9 @@ public class DeleteCommand implements MenuCommand {
         System.out.println("Delete.");
         network.deleteTariff();
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

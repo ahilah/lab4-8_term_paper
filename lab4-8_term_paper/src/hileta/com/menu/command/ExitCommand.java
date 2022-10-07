@@ -9,4 +9,9 @@ public class ExitCommand implements MenuCommand {
         System.out.println("\n\n\t Program is ended.");
         System.exit(0);
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

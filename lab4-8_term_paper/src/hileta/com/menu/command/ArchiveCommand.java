@@ -16,4 +16,9 @@ public class ArchiveCommand implements MenuCommand {
         System.out.println("archive");
         network.archiveTariff();
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }

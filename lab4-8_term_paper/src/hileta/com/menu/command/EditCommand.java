@@ -15,4 +15,9 @@ public class EditCommand implements MenuCommand {
         System.out.println("edit");
         network.getTariff();
     }
+
+    @Override
+    public String getCommandInfo() {
+        return COMMAND_INFO;
+    }
 }
