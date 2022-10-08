@@ -12,7 +12,7 @@ public class Network {
     private String companyEmail;
 
     private List<BaseTariff> operatorAvailableTariffs;
-    private List<BaseTariff> operatorArchiveTariffs;
+    private List<BaseTariff> operatorArchivedTariffs;
 
     private List<Customer> operatorCustomers;
 
@@ -21,20 +21,23 @@ public class Network {
     private List<Abroad> operatorListAbroad;
 
 
-    public void addTariff(/*BaseTariff tariff*/) {
-        /*operatorAvailableTariffs.add(tariff);*/
+    public void addTariff(BaseTariff tariff) {
+        operatorAvailableTariffs.add(tariff);
     }
 
-    public void archiveTariff(/*BaseTariff tariff*/) {
-        /*operatorArchiveTariffs.add(tariff);*/
+    public void archiveTariff(BaseTariff tariff) {
+        operatorArchivedTariffs.add(tariff);
     }
 
     public void showTariffs() {
+        for (int i = 0, j = i; i < operatorAvailableTariffs.size(); i++, j++) {
+            System.out.println(String.valueOf(j) + operatorAvailableTariffs.get(i));
+        }
 
     }
 
-    public void deleteTariff() {
-
+    public void deleteTariff(int numberOfTariff) {
+        operatorAvailableTariffs.remove(numberOfTariff);
     }
 
     public void addNumber() {
@@ -61,8 +64,20 @@ public class Network {
 
     }
 
-    public void getTariff() {
+    public BaseTariff getTariff(int numberOfTariff) {
+        return operatorAvailableTariffs.get(numberOfTariff);
+    }
 
+    public BaseTariff getTariffFromArchive(int numberOfTariff) {
+        return operatorArchivedTariffs.get(numberOfTariff);
+    }
+
+    public int getNumberAvailableTariffs() {
+        return operatorAvailableTariffs.size();
+    }
+
+    public int getNumberArchivedTariffs() {
+        return operatorArchivedTariffs.size();
     }
 
     public List<BaseTariff> getOperatorAvailableTariffs() {

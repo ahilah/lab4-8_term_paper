@@ -4,9 +4,13 @@ import hileta.com.menu.command.commandable.MenuCommand;
 
 public class ExitCommand implements MenuCommand {
 
+    private String COMMAND_INFO = "exit";
+    private static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     @Override
     public void execute() {
-        System.out.println("\n\n\t Program is ended.");
+        System.out.println(ANSI_PURPLE + "\n\n\t Program is ended." + ANSI_RESET);
         System.exit(0);
     }
 

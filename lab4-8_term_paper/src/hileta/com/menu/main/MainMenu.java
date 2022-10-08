@@ -13,7 +13,7 @@ public class MainMenu {
             mainCommand.showAvailableCommands();
             System.out.print("Enter your command here: ");
             int command = scanner.nextInt();
-            mainCommand.execute(command);
+            mainCommand.execute(--command);
         }
     }
 }

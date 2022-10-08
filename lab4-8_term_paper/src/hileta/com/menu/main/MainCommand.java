@@ -9,8 +9,9 @@ import java.util.*;
 public class MainCommand {
 
     private List<MenuCommand> menuItems;
-    private Network operatorNetwork = null;
-    public static final String ANSI_RED = "\u001B[31m";
+    private Network operatorNetwork;
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_RESET = "\u001B[0m";
 
     public MainCommand() {
         operatorNetwork = new Network();
@@ -21,6 +22,7 @@ public class MainCommand {
         menuItems.add(new SortCommand(operatorNetwork));
         menuItems.add(new DeleteCommand(operatorNetwork));
         menuItems.add(new ArchiveCommand(operatorNetwork));
+        menuItems.add(new NumberCustomersCommand(operatorNetwork));
         menuItems.add(new ExitCommand());
     }
 
@@ -31,13 +33,13 @@ public class MainCommand {
             menuItems.get(numberOfCommand).execute();
         }
         catch(Exception e) {
-            System.out.println(ANSI_RED + "Incorrect command! Try again.");
+            System.out.println(ANSI_RED + "Incorrect command! Try again." + ANSI_RESET);
         }
     }
 
     public void showAvailableCommands() {
         for (int i = 0, j = i + 1; i < menuItems.size(); i++, j++) {
-            "\n" + j + " - " + menuItems.get(i).;
+            System.out.println(j + " - " + menuItems.get(i).getCommandInfo());
         }
     }
 

@@ -4,6 +4,8 @@ import hileta.com.menu.command.commandable.MenuCommand;
 import network.Network;
 
 public class FromFileCommand implements MenuCommand {
+
+    private String COMMAND_INFO = "input from file";
     private Network network;
 
     public FromFileCommand(Network network) {

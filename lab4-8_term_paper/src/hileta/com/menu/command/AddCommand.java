@@ -15,7 +15,7 @@ public class AddCommand implements MenuCommand {
     @Override
     public void execute() {
         System.out.println("add");
-        network.addTariff();
+        //network.addTariff();
         network.addAbroad();
         network.addCustomer();
         network.addNumber();
